@@ -1,0 +1,79 @@
+.sidebar {
+  min-height: 100vh;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f8fafc;
+  padding: 35px 25px;
+  align-items: start;
+  font-family: PF Encore Sans Pro;
+}
+
+.sidebar img {
+  width: 20px;
+}
+.menu {
+  display: block;
+  cursor: pointer;
+}
+.sidebar-top {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.sidebar-top .new-chat {
+  display: inline-flex;
+  gap: 10px;
+  padding: 15px 25px;
+  border-radius: 50px;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 17px;
+  color: grey;
+  background: #d5dbe5;
+  cursor: pointer;
+}
+.sidebar-top .recent-title {
+  margin-top: 40px;
+  font-size: 20px;
+}
+.recent {
+  display: flex;
+  flex-direction: column;
+  gap: -6px;
+  max-height: 400px;
+  overflow-y: scroll;
+}
+.recent::-webkit-scrollbar {
+  display: none;
+}
+.recent-entry {
+  display: inline-flex;
+  gap: 10px;
+  padding: 10px 15px;
+  border-radius: 50px;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 17px;
+  cursor: pointer;
+}
+.recent-entry:hover {
+  background-color: #d5dbe5;
+}
+.sidebar-bottom {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.no-activity {
+  color: #e95140;
+  font-weight: 700;
+}
+.no-activity:hover {
+  background-color: transparent;
+}
+@media (max-width: 768px) {
+  .sidebar{
+    display: none;
+  }
+}

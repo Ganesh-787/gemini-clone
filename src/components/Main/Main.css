@@ -1,0 +1,199 @@
+.main {
+  flex: 1;
+  min-height: 100vh;
+  padding-bottom: 15vh;
+  position: relative;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+}
+nav img {
+  width: 50px;
+  border-radius: 50%;
+}
+nav p {
+  font-size: 18px;
+}
+.main-container {
+  max-width: 900px;
+  margin: auto;
+}
+.greet {
+  margin: 50px 0;
+  font-size: 56px;
+  font-weight: 500;
+  color: #c2c3bd;
+  padding: 20px;
+}
+.greet span {
+  background: -webkit-linear-gradient(16deg, #4b90ff, #ff5546);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.main .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 25px;
+  margin-top: 100px;
+}
+.card {
+  height: 220px;
+  background-color: #f2f3f4;
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.card:hover {
+  transform: scale(1.05);
+  background-color: #d8dee5;
+}
+.card img {
+  width: 35px;
+  padding: 5px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+.card p {
+  font-size: 16px;
+  color: #555;
+}
+.main-bottom {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  padding: 10px;
+}
+.search-box {
+  display: flex;
+  width: 100%;
+  background-color: #e5e8eb;
+  padding: 15px 30px;
+  border-radius: 50px;
+}
+.search-box input {
+  flex: 1;
+  outline: none;
+  border: none;
+  background: transparent;
+  font-size: 18px;
+}
+.search-box .icons {
+  display: flex;
+  gap: 10px;
+}
+.search-box .icons img {
+  width: 25px;
+  cursor: pointer;
+}
+.bottom-text {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  color: #555;
+}
+.result {
+  display: flex;
+  flex-direction: column;
+}
+.result-title {
+  font-size: 18px;
+  display: flex; 
+  gap: 30px;
+  align-items: center;
+}
+.result-title img {
+  width: 50px;
+  border-radius: 50%;
+}
+.result-content{
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  height: 570px;
+  overflow-y: scroll;
+  padding: 20px 10px;
+}
+.result-content::-webkit-scrollbar{
+  display: none;
+}
+.result-content img{
+  height: 50px;
+  border-radius: 50%;
+}
+.result-content p{
+  font-size: 17px;
+  line-height: 1.8;
+}
+.loading {
+  width: 100%; 
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.loading hr {
+  border-radius: 7px;
+  border: none;
+  background: linear-gradient(90deg, #3498db, #dcfbff, #3498db);
+  background-size: 800px 50px; /* Double width for smooth animation */
+  height: 20px;
+  animation: loader 2s infinite linear; /* Infinite animation */
+}
+
+@keyframes loader {
+  0% {
+    background-position: -800px 0; /* Start position */
+  }
+  100% {
+    background-position: 800px 0; /* End position */
+  }
+}
+
+@media (max-width: 768px) {
+  .greet{
+    font-size: 50px;
+    padding: 20px 50px;
+    margin-top: -10px;
+  }
+  .main .cards {
+    margin-top: 10px;
+    grid-template-columns: repeat(2, 1fr); /* Display two cards per row */
+  }
+  .card {
+    height: 120px;
+    background-color: #f2f3f4;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.4s ease;
+  }
+  .card img {
+    width: 35px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+  .card p {
+    font-size: 10px;
+  }
+  .bottom-text{
+    font-size: 10px;
+  }
+  .main-bottom{
+    bottom: 20px;
+  }
+}
